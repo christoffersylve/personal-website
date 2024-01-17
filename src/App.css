@@ -122,7 +122,7 @@ span.navbar-text {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin-left: 14px;
+    margin-left: 0px;
 }
 .social-icon a {
     width: 42px;
@@ -287,7 +287,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-left: 25px;
 }
 .banner img {
-  /*animation: updown 2s linear infinite;*/
+  margin: 10vh 0vh 0vh 0vh; 
 }
 @keyframes updown {
     0% {
@@ -303,6 +303,47 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+/************ Education Css ************/
+
+.education {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15vh 0vh 15vh 0vh;
+}
+
+.education h1,h2 {
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+}
+
+.education-box {
+  padding: 30vh 0vh 30vh 0vh;
+  background:bisque;
+}
+
+/************ Experience Css ************/
+
+.experience {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15vh 0vh 15vh 0vh;
+  
+}
+
+.experience h1,h2 {
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+}
+
+.experience-box {
+  padding: 30vh 0vh 30vh 0vh;
+  background:bisque;
+}
+
 
 /************ Skills Css ************/
 .skill {
@@ -315,6 +356,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
 }
 .skill h2 {
 	font-size: 45px;
@@ -470,25 +519,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 60px 0 200px 0;
+  background:bisque;   
+  padding: 60px 50px;
+  margin: 20vh 0vh 20vh 0vh; 
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
 }
 .contact img {
   width: 92%;
 }
 .contact h2 {
+  display: flex;
+  justify-content: left;
 	font-size: 45px;
 	font-weight: 700;
   margin-bottom: 30px;
 }
 .contact form input, .contact form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.52);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  color: #fff;
+  color: #121221;
   margin: 0 0 8px 0;
   padding: 18px 26px;
   font-weight: 500;
@@ -503,52 +563,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: #121212;
 }
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
   color: #121212;
   opacity: 0.8;
 }
-.contact form button {
-  font-weight: 700;
-  color: #000;
-  background-color: #fff;
-  padding: 14px 48px;
-  font-size: 18px;
-  margin-top: 25px;
-  border-radius: 0;
-  position: relative;
-  transition: 0.3s ease-in-out;
-}
-.contact form button span {
-  z-index: 1;
-  position: relative;
-}
-.contact form button:hover {
-  color: #fff;
-}
-.contact form button::before {
-  content: "";
-  background: #121212;
-  width: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  transition: 0.3s ease-in-out;
-}
-.contact form button:hover::before {
-  width: 100%;
-}
 
+/* top right bottom left */
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3vh 0px 3vh 0px;
   background-color: bisque;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  box-shadow: 0 -3px 10px 3px rgba(0, 0, 0, 0.2);
 }
 .newsletter-bx {
   background: #FFFFFF;
@@ -610,6 +643,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   border-radius: 18px;
 }
+
 .footer img {
   width: 26%;
 }

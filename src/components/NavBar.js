@@ -12,16 +12,7 @@ export const NavBar = () => {
     const [scrolled,setScrolled] =  useState(false); // Default value
 
     useEffect(() => {
-        const onScroll = () => {
-            // Just bad code. Change later
-            if(window.scrollY > 120) {
-                setScrolled(true);
-            } else {
-                setScrolled(false)
-            }
-
-            //setScrolled(window.scrollY > 50);
-        }
+        const onScroll = () => {setScrolled(window.scrollY > 50)}
 
         window.addEventListener("scroll",onScroll);
 
@@ -55,7 +46,7 @@ export const NavBar = () => {
                         <FacebookIcon href="https://www.facebook.com/christoffer.sylve.1/" alt=""  onClick={ () => window.open('https://www.facebook.com/christoffer.sylve.1/')} sx={{ cursor: 'pointer' }} fontSize="large"/>
                         <GitHubIcon  href="https://www.github.com/christoffersylve" alt=""  onClick={ () => window.open('https://www.github.com/christoffersylve')} sx={{ cursor: 'pointer' }} fontSize="large"/>
                     </div>
-                    <button className="vvd" onClick={ () => console.log('connect') }>
+                    <button href="#connect" className="vvd" onClick={ () => window.open('https://www.linkedin.com/in/christoffer-sylve') }>
                         Let's Connect
                     </button>
                 </span>

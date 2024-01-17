@@ -54,7 +54,7 @@ export const Banner = () => {
 
         // TODO: Make it look nicer. 
         <section className="banner" id="home">
-            <Container>    
+            <Container>   
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">
