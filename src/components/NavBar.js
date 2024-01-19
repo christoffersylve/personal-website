@@ -26,7 +26,7 @@ export const NavBar = () => {
     return(
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
-            <Navbar.Brand href="home"> 
+            <Navbar.Brand href="#home"> 
                 <h3>C.SYLVE</h3>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -46,15 +46,15 @@ export const NavBar = () => {
                         <FacebookIcon href="https://www.facebook.com/christoffer.sylve.1/" alt=""  onClick={ () => window.open('https://www.facebook.com/christoffer.sylve.1/')} sx={{ cursor: 'pointer' }} fontSize="large"/>
                         <GitHubIcon  href="https://www.github.com/christoffersylve" alt=""  onClick={ () => window.open('https://www.github.com/christoffersylve')} sx={{ cursor: 'pointer' }} fontSize="large"/>
                     </div>
-                    <button href="#connect" className="vvd" onClick={ () => onUpdateActiveLink('connect')}>
-                    <Nav.Link href="#connect" onClick={ () => onUpdateActiveLink('connect')}>Let's Connect</Nav.Link>
-                    </button>
+                    <Nav.Link className="link-button" href="#connect" onClick={ () => onUpdateActiveLink('connect')}>Let's Connect</Nav.Link>
                 </span>
             </Navbar.Collapse>
             </Container>
         </Navbar>
     )
 }
+
+// <button href="#connect" className="vvd" onClick={ () => onUpdateActiveLink('connect')}></button>
 
 // <img scr={logo} alt="Logo"/> 
 // 

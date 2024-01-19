@@ -36,7 +36,7 @@ export const Contact = () => {
 
     const handleSubmit = (e) => {
       setFormDetails(formInitialDetails);
-      //sendEmail();
+      sendEmail();
     }
 
     const sendEmail = (e) => {
