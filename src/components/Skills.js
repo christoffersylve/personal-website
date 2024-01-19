@@ -1,79 +1,126 @@
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import TrackVisibility from 'react-on-screen';
 
-// Import Icons
-import SportsBarIcon from '@mui/icons-material/SportsBar';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
-import BusinessIcon from '@mui/icons-material/Business';
-import WorkIcon from '@mui/icons-material/Work';
-import LocalCafeIcon from '@mui/icons-material/LocalCafe';
-import SpeakerIcon from '@mui/icons-material/Speaker';
+// Importing Icons 
+
+
+
 
 export const Skills = () => {
 
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+//   const projects = [
+//     {
+//       title: "Business Startup",
+//       description: "Design & Development",
+//       imgUrl: projImg1,
+//     },
+//     {
+//       title: "Business Startup",
+//       description: "Design & Development",
+//       imgUrl: projImg2,
+//     },
+//     {
+//       title: "Business Startup",
+//       description: "Design & Development",
+//       imgUrl: projImg3,
+//     },
+//     {
+//       title: "Business Startup",
+//       description: "Design & Development",
+//       imgUrl: projImg1,
+//     },
+//     {
+//       title: "Business Startup",
+//       description: "Design & Development",
+//       imgUrl: projImg2,
+//     },
+//     {
+//       title: "Business Startup",
+//       description: "Design & Development",
+//       imgUrl: projImg3,
+//     },
+//   ];
 
   return (
-    <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>There is more to life than work</h2>
-                        <p>Throughout my time in Lund, I've had the privilege of participating in a variety <br></br> of extracurricular activities with some truly amazing people!</p>
-                        <Carousel 
-                                    responsive={responsive}
-                                    infinite={true} 
-                                    arrows={true} 
-                                    showDots={false}
-                                    draggable={false}
-                                    swipeable={true}
-                                    className="owl-carousel owl-theme skill-slider"
-                        >
-                            <div className="item">
-                                <SportsBarIcon sx={{ fontSize: 80 }}/> 
-                                <h5>Head of Bar</h5>                                
-                            </div>
-                            <div className="item">
-                                <SpeakerIcon sx={{ fontSize: 80 }}/> 
-                                <h5>Concert Event Manager</h5>                                
-                            </div>
-                            <div className="item">
-                                <NewspaperIcon sx={{ fontSize: 80 }}/>
-                                <h5>README.md</h5>
-                            </div>
-                            <div className="item">
-                                <LocalCafeIcon sx={{ fontSize: 80 }}/>
-                                <h5>Shift Leader</h5>
-                            </div>
-                            <div className="item">
-                                <WorkIcon sx={{ fontSize: 80 }}/>
-                                <h5></h5>
-                                <h5>Company Host</h5>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div className="skills-section" id="skills">
+    <section className="skills" >
+      <Container>
+        <Row>
+          <Col size={12}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+              <div className={""}>
+                <h2>TECHNICAL SKILLS</h2>
+                <p>A collection of technical skills I have had the privilage to have worked with</p>
+                <p>proficient in all and above</p>
+                <Tab.Container id="projects-tabs" defaultActiveKey="second">
+                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">Frameworks</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="second">Programming Languages</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="third">Software</Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                    <Tab.Pane eventKey="first">
+                        <div className="grid">
+                            <Row>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original-wordmark.svg" style={{height:100, width:100}}/>    
+                            </Row>
+                        </div>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                        <div className="grid">
+                            <Row className="row">   
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"style={{height:100, width:100}}/>          
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original-wordmark.svg"style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clojure/clojure-original.svg"style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg"style={{height:100, width:100}}/>          
+                            </Row>
+                        </div>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                        <div className="grid">    
+                            <Row>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original-wordmark.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg" style={{height:100, width:100}}/>          
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" style={{height:100, width:100}}/>  
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg" style={{height:100, width:100}}/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg" style={{height:100, width:100}}/>
+                            </Row>                   
+                        </div>
+                    </Tab.Pane>
+                  </Tab.Content>
+                </Tab.Container>
+              </div>}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
     </section>
+    </div>
   )
 }

@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap"
 import { Button } from '@mui/material';
-import imgPB from '../assets/img/pbmono.png'
+import imgPB from '../assets/img/websitePB.png'
 import { useEffect, useState } from "react";
 import resume from '../assets/img/Christoffer_Sylve_Resumé.pdf';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -14,7 +14,7 @@ export const Banner = () => {
     const [index, setIndex] = useState(1);
     const period = 1000; 
 
-    const toRotate = [ "programming","studying", " working on a side project", "listening to music", "hanging out with friends :)"];
+    const toRotate = [ "programming","studying", " working on a side project", "coding up this website", "listening to music", "hanging out with friends :)", "struggling with css :("];
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -27,15 +27,18 @@ export const Banner = () => {
       const tick = () => {
 
         let i = loopNum % toRotate.length;
+        let firstDelete = true;
         let fullText = toRotate[i];
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
         setText(updatedText);
+
         if (isDeleting) {
-          setDelta(prevDelta => prevDelta/2 > 50 ?  prevDelta/2 : 30); // Increase speed. Max out ad 50. 
+            setDelta(prevDelta => prevDelta/2 > 30 ?  prevDelta/2 : 30); // Increase speed. Max out ad 50. 
         }
     
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true);
+            firstDelete = true;
             setIndex(prevIndex => prevIndex - 1);
             setDelta(period);
         } else if (isDeleting && updatedText === '') {

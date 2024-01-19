@@ -26,8 +26,7 @@ export const Contact = () => {
             [category]: value
           })
         }
-
-
+        
     const SERVICE_ID = "service_11rw1zg";
     const TEMPLATE_ID = "template_jrkcu7b";
     const PUBLIC_KEY = "ssKDTLpn0TCaKh_pi";
@@ -35,26 +34,37 @@ export const Contact = () => {
     // NEW FROM EMAILJS
     const form = useRef();
 
+    const handleSubmit = (e) => {
+      setFormDetails(formInitialDetails);
+      //sendEmail();
+    }
+
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
         .then((result) => {
             console.log(result.text);
         }, (error) => {
-            console.log("DHSADHASDHADHIADHIDHAIS")
             console.log(error.text);
         });
     };
 
   return (
-    <section className="contact" id="connect">
+    <div className="contact-section" id="connect">
+    <section className="contact">
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div>
-                <h2>What to get in touch?</h2>
+                <h2>You want to...</h2>
+                <h1>... explore a job oppertunity?</h1>
+                <h1>... discuss programming?</h1>
+                <h1>... grab a coffee?</h1>
+                <h1>... play a round of golf?</h1>
+                <h1>... or just get in touch? </h1>
+                <h1></h1>
                 <h3>Write me a message!</h3>
               </div>
               }
@@ -65,7 +75,7 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <h2>Get In Touch</h2>
-                <form ref={form} onSubmit={sendEmail}>
+                <form ref={form} onSubmit={handleSubmit}>
                   <Row>
                     <Col size={12} sm={6} className="px-1">
                       <input type="text" name="user_first_name" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
@@ -97,5 +107,6 @@ export const Contact = () => {
         </Row>
       </Container>
     </section>
+    </div>
   )
 }
