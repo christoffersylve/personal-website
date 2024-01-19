@@ -11,7 +11,6 @@ export const Banner = () => {
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState(''); 
     const [delta, setDelta] = useState(100- Math.random() * 100);
-    const [index, setIndex] = useState(1);
     const period = 1000; 
 
     const toRotate = [ "programming","studying", " working on a side project", "coding up this website", "listening to music", "hanging out with friends :)", "struggling with css :("];
@@ -39,16 +38,13 @@ export const Banner = () => {
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true);
             firstDelete = true;
-            setIndex(prevIndex => prevIndex - 1);
             setDelta(period);
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setIndex(1);
             setDelta(50);
         } else {
             setDelta(40 + Math.random()*20);  
-            setIndex(prevIndex => prevIndex + 1);
         }
       }
 
