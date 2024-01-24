@@ -22,7 +22,6 @@ export const NavBar = () => {
         setActivateLink(value);
     }
 
-
     return(
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>

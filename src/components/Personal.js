@@ -4,7 +4,6 @@ import 'react-multi-carousel/lib/styles.css';
 // Import Icons
 import SportsBarIcon from '@mui/icons-material/SportsBar';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
-import BusinessIcon from '@mui/icons-material/Business';
 import WorkIcon from '@mui/icons-material/Work';
 import LocalCafeIcon from '@mui/icons-material/LocalCafe';
 import SpeakerIcon from '@mui/icons-material/Speaker';

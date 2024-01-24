@@ -4,14 +4,20 @@ import imgPB from '../assets/img/websitePB.png'
 import { useEffect, useState } from "react";
 import resume from '../assets/img/Christoffer_Sylve_Resumé.pdf';
 import DownloadIcon from '@mui/icons-material/Download';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
 export const Banner = () => {
 
+    const [getAccessToken,setAccessToken] = useState('');
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState(''); 
     const [delta, setDelta] = useState(100- Math.random() * 100);
     const period = 1000; 
+    const [qc, setQc] = useState(0);
+
+    let count = 0;
+
 
     const toRotate = [ "programming","studying", " working on a side project", "coding up this website", "listening to music", "hanging out with friends :)", "struggling with css :("];
 
@@ -21,9 +27,9 @@ export const Banner = () => {
         }, delta);
     
         return () => { clearInterval(ticker) };
-      }, [text])
+    }, [text])
     
-      const tick = () => {
+    const tick = () => {
 
         let i = loopNum % toRotate.length;
         let firstDelete = true;
@@ -46,8 +52,46 @@ export const Banner = () => {
         } else {
             setDelta(40 + Math.random()*20);  
         }
-      }
+    }
 
+    async function fetchAccessToken() {
+        console.log("TEST");
+        var authParameters = {
+            method: 'Post',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'grant_type=client_credentials&client_id=' + process.env.REACT_APP_SPOTIFY_CLIENT_ID + '&client_secret' + process.env.REACT_APP_SPOTIFY_CLIENT_SECRET
+         }
+
+         console.log(authParameters);
+
+        fetch('https://accounts.spotify.com/api/token',authParameters)
+            .then(result => {
+                console.log(result);
+                return result.json;
+            })
+            .then(data => setAccessToken(data.access_token))
+
+        console.log("My accesstoken: ");
+    }
+
+    async function getMusic () {
+        let url = "";
+        let response = await fetch(url);
+        let data = await response.json();
+        return data;
+    }
+
+    function increment() {
+        let temp = qc;
+        temp = temp + 1;
+        setQc(temp);
+    }
+
+    function reset() {
+        setQc(0);
+    }
 
     return (
 
@@ -78,3 +122,5 @@ export const Banner = () => {
         </section>
     )
 }
+
+// Current: 7 
