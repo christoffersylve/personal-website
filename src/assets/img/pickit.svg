@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>06_p-symbol</title>
+    <g id="06_p-symbol" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F7F7F7" x="0" y="0" width="800" height="800"></rect>
+        <g transform="translate(283.827381, 283.827381)">
+            <path d="M116.672619,132.781746 C147.04828,132.781746 171.672619,108.157407 171.672619,77.7817459 C171.672619,47.4060847 147.04828,22.7817459 116.672619,22.7817459 C86.2969577,22.7817459 61.6726189,47.4060847 61.6726189,77.7817459 C61.6726189,108.157407 86.2969577,132.781746 116.672619,132.781746 Z" id="Circle" fill="#FB1790" transform="translate(116.672619, 77.781746) rotate(45.000000) translate(-116.672619, -77.781746) "></path>
+            <polygon id="Square" fill="#6716D8" transform="translate(77.781746, 116.672619) rotate(45.000000) translate(-77.781746, -116.672619) " points="22.7817459 61.6726189 132.781746 61.6726189 132.781746 171.672619 22.7817459 171.672619"></polygon>
+            <polygon id="Rectangle" fill="#96DDD1" transform="translate(136.118055, 175.008928) rotate(45.000000) translate(-136.118055, -175.008928) " points="108.618055 120.008928 163.618055 120.008928 163.618055 230.008928 108.618055 230.008928"></polygon>
+        </g>
+    </g>
+</svg>

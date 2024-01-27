@@ -31,6 +31,7 @@ export const Personal = () => {
     }
   };
 
+
   return (
     <section className="personal" id="personal">
         <div className="container">
@@ -75,6 +76,16 @@ export const Personal = () => {
                                 <h5>Ball Committee</h5>
                             </div>
                         </Carousel>
+                    </div>
+                    <div className='personal-lower-box'>
+                      <div className='hobbies'>
+                          <h3>Hobbies And Projects</h3>
+                          <p></p>
+                      </div>
+                      <div className='music'>
+                          <h3>Music</h3>
+                          <p></p>
+                      </div>
                     </div>
                 </div>
             </div>

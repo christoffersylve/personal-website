@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 //import contactImg from "../assets/img/contact-img.svg";
 import TrackVisibility from 'react-on-screen';
 import SendIcon from '@mui/icons-material/Send';
+import CheckIcon from '@mui/icons-material/Check';
 import { Button } from '@mui/material';
 import emailjs from '@emailjs/browser';
 
@@ -16,9 +17,9 @@ export const Contact = () => {
         phone: '',
         message: ''
       }
+
       const [formDetails, setFormDetails] = useState(formInitialDetails);
-      const [buttonText, setButtonText] = useState('Send');
-      const [status, setStatus] = useState({});
+      const [isClicked, setIsClicked] = useState(false);
     
       const onFormUpdate = (category, value) => {
           setFormDetails({
@@ -35,13 +36,15 @@ export const Contact = () => {
     const form = useRef();
 
     const handleSubmit = (e) => {
+      e.preventDefault();
+      sendEmail(e);
       setFormDetails(formInitialDetails);
-      sendEmail();
+      setIsClicked(true);
     }
 
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
         .then((result) => {
             console.log(result.text);
         }, (error) => {
@@ -59,7 +62,7 @@ export const Contact = () => {
               {({ isVisible }) =>
               <div>
                 <h2>You want to...</h2>
-                <h1>... explore a job oppertunity?</h1>
+                <h1>... explore a job opportunity?</h1>
                 <h1>... discuss programming?</h1>
                 <h1>... grab a coffee?</h1>
                 <h1>... play a round of golf?</h1>
@@ -91,14 +94,7 @@ export const Contact = () => {
                     </Col>
                     <Col size={12} className="px-1">
                       <textarea rows="6" name="message" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                      <Button variant="outlined" type="submit" value="Send" size="large" sx={{color: '#121212', border: '2px solid black', '&:hover':{border: '2px solid gray'}}} endIcon={<SendIcon />}>Send</Button>
-                    </Col>
-                    {
-                      status.message &&
-                      <Col>
-                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                      </Col>
-                    }
+                      <Button variant="outlined" type="submit" value="Send" size="large" sx={{color: '#121212', border: '2px solid black', '&:hover':{border: '2px solid gray'}}} disabled = {isClicked} endIcon={!isClicked ? <SendIcon/> : <CheckIcon/>}>{!isClicked ? "Send" : "Sent"}</Button>                    </Col>
                   </Row>
                 </form>
               </div>}

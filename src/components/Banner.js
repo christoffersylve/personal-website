@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import { Button } from '@mui/material';
 import imgPB from '../assets/img/websitePB.png'
 import { useEffect, useState } from "react";
-import resume from '../assets/img/Christoffer_Sylve_Resumé.pdf';
+import resume from '../assets/files/Christoffer_Sylve_Resumé.pdf';
 import DownloadIcon from '@mui/icons-material/Download';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
@@ -52,45 +52,6 @@ export const Banner = () => {
         } else {
             setDelta(40 + Math.random()*20);  
         }
-    }
-
-    async function fetchAccessToken() {
-        console.log("TEST");
-        var authParameters = {
-            method: 'Post',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: 'grant_type=client_credentials&client_id=' + process.env.REACT_APP_SPOTIFY_CLIENT_ID + '&client_secret' + process.env.REACT_APP_SPOTIFY_CLIENT_SECRET
-         }
-
-         console.log(authParameters);
-
-        fetch('https://accounts.spotify.com/api/token',authParameters)
-            .then(result => {
-                console.log(result);
-                return result.json;
-            })
-            .then(data => setAccessToken(data.access_token))
-
-        console.log("My accesstoken: ");
-    }
-
-    async function getMusic () {
-        let url = "";
-        let response = await fetch(url);
-        let data = await response.json();
-        return data;
-    }
-
-    function increment() {
-        let temp = qc;
-        temp = temp + 1;
-        setQc(temp);
-    }
-
-    function reset() {
-        setQc(0);
     }
 
     return (

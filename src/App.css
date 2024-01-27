@@ -352,7 +352,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   margin-bottom: 4vh;
   margin-top: 4vh;
-  box-shadow: 0px 3px 12px 0px #ccc;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
   border: 1px solid transparent;
 }
 
@@ -379,8 +386,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .educationCard h2 {
+  margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   margin-bottom: 0;
 }
@@ -425,24 +433,70 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   justify-content: center;
   flex-direction: column;
   padding: 10vh 0vh 15vh 0vh;
-  
 }
 
 .experience h1,h2 {
-  display: flex;
   font-weight: 700;
+  display: flex;
   justify-content: center;
+  margin: 5svh;
+}
+
+.experience p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: left;
 }
 
 .experience-box {
-  padding: 30vh 0vh 30vh 0vh;
-  background:bisque;
+  padding: 20svh 0vh 30vh 0vh;
+  background:#ffe4c4;
+}
+
+.experience .boxtest {
+  width: 100%;
+}
+
+.experience .hello {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+.experience-timeline-icon {
+  height: 100%;
+  padding: auto;
+  background-color: transparent;
+}
+
+.experience-timeline-icon img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.experience-timeline h3 {
+  margin: 0;
+  color: black ;
+  display: flex;
+  justify-content: left;
+  font-weight: 700;
+}
+
+.experience-timeline-bulletpoints {
+  color: black;
+  font-weight: 200;
+  font-size: 18px;
+  letter-spacing: 0.8px;
 }
 
 
 /************ personal Css ************/
+
 .personal {
-  padding: 20vh 0px 20vh 0px;
+  padding: 10vh 0px 20vh 0px;
   position: relative;
 }
 .personal-bx {
@@ -464,6 +518,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-size: 45px;
 	font-weight: 700;
 }
+
+.personal h3 {
+  font-size: 35px;
+	font-weight: 700;
+}
+
 .personal p {
     color: black;
     font-size: 18px;
@@ -487,6 +547,42 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40%;
   z-index: -4;
 }
+
+.personal-lower-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: auto;
+  gap: 20px;
+}
+
+.personal-lower-box .hobbies, .music {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+  border-radius: 64px;
+  margin-top: 5svh;
+  background-color: bisque;
+  height: 100%;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  height: 400px;
+}
+
+.personal-lower-box .hobbies {
+  width: 70% ;
+}
+
+.personal-lower-box .music {
+  width: 30%;
+}
+
 
 /************ Skills Css ************/
 .skills-section {
@@ -633,8 +729,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
-
-
 
 /************ Contact Css ************/
 
