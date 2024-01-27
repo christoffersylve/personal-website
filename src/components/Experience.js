@@ -40,9 +40,16 @@ export const Experience = () => {
                 {experience.company_name}
               </h5>
             </div>
-              <p>
-                {experience.description}
-              </p>
+            <p>
+              {experience.description}
+            </p>
+            <div className="language-container">
+              {experience.tags.map((tag, index) => (
+                <div key={`experience-point-${index}`} className="language-box">
+                  <h5>{tag}</h5>
+                </div>
+              ))}
+            </div>
           </VerticalTimelineElement>
         );
     };

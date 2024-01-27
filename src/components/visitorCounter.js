@@ -18,12 +18,11 @@ export const VisitorCounter = () => {
       }).then((response) => response.json())
       .then((json) => setVisitorCount(json.value));
     }
-    console.log(visitorCount);
   });
 
   return (
     <div className='visitor-counter'>
-        <h2>{visitorCount} visitors to this website so far!</h2>
+        <h2>{visitorCount} hits to this website so far!</h2>
     </div>
   )
 }

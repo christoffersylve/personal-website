@@ -74,7 +74,7 @@ export const Banner = () => {
                         <Button variant="outlined" size="large" sx={{color: '#121212', border: '2px solid black', '&:hover':{border: '2px solid gray'}}} endIcon={<DownloadIcon />} href={resume} download="Resume">Download My Resume</Button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={imgPB} alt="Header Img" />
+                        <img className="img" src={imgPB} alt="Header Img" />
                     </Col>
                 </Row>
             </Container>
