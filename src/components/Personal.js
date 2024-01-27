@@ -77,7 +77,15 @@ export const Personal = () => {
                             </div>
                         </Carousel>
                     </div>
-                    <div className='personal-lower-box'>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+  )
+}
+
+{/* <div className='personal-lower-box'>
                       <div className='hobbies'>
                           <h3>Hobbies And Projects</h3>
                           <p></p>
@@ -86,10 +94,4 @@ export const Personal = () => {
                           <h3>Music</h3>
                           <p></p>
                       </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-  )
-}
+                    </div> */}

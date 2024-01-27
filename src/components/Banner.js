@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import { Button } from '@mui/material';
 import imgPB from '../assets/img/websitePB.png'
 import { useEffect, useState } from "react";
-import resume from '../assets/files/Christoffer_Sylve_Resumé.pdf';
+import resume from '../assets/files/christoffer-sylve-cv.pdf';
 import DownloadIcon from '@mui/icons-material/Download';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
