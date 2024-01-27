@@ -14,10 +14,8 @@ export const Banner = () => {
     const [text, setText] = useState(''); 
     const [delta, setDelta] = useState(100- Math.random() * 100);
     const period = 1000; 
-    const [qc, setQc] = useState(0);
 
     let count = 0;
-
 
     const toRotate = [ "programming","studying", " working on a side project", "coding up this website", "listening to music", "hanging out with friends :)", "struggling with css :("];
 

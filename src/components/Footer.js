@@ -3,9 +3,30 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import '../App.css';
+import { useEffect, useState } from "react";
+
 
 
 export const Footer = () => {
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [visitorCount,setVisitorCount] = useState(0);
+
+  const URL = "https://api.api-ninjas.com/v1/counter?id=counter&hit=true";
+
+  useEffect(() => {
+    if(!isLoaded) {
+      setIsLoaded(true);
+      fetch(URL, {
+        method: "GET", 
+        headers: { 'X-Api-Key': 'z2mDhJso2VClEhvrv0LqJg==TK2yhSuGYrLyve0d'},
+        contentType: 'application/json',
+      }).then((response) => response.json())
+      .then((json) => setVisitorCount(json.value));
+    }
+    console.log(visitorCount);
+  });
+
   return (
     <footer className="footer">
       <Container className="container">
@@ -20,7 +41,7 @@ export const Footer = () => {
                 <FacebookIcon href="https://www.facebook.com/christoffer.sylve.1/" alt=""  onClick={ () => window.open('https://www.facebook.com/christoffer.sylve.1/')} sx={{ cursor: 'pointer' }} fontSize="large"/>
                 <GitHubIcon  href="https://www.github.com/christoffersylve" alt=""  onClick={ () => window.open('https://www.github.com/christoffersylve')} sx={{ cursor: 'pointer' }} fontSize="large"/>
             </div>
-            <p>No Copyright 2024. No Rights Reserved</p>
+            <p>Copyright 2024. Rights Reserved</p>
           </Col>
         </Row>
       </Container>

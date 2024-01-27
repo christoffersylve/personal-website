@@ -130,6 +130,7 @@ span.navbar-text {
     gap: 10px;
     margin-left: 0px;
 }
+
 .social-icon a {
     width: 42px;
     height: 42px;
@@ -788,6 +789,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact h3 {
   margin-top: 10vh;
+}
+
+/************ Counter Css ************/
+
+.visitor-counter {
+  display: flex;
+  justify-content: center;
+  margin: 10svh;
+}
+
+.visitor-counter h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
 }
 
 /* top right bottom left */
