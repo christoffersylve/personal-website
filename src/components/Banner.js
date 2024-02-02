@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import resume from '../assets/files/christoffer-sylve-cv.pdf';
 import DownloadIcon from '@mui/icons-material/Download';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import { motion } from "framer-motion"
 
 export const Banner = () => {
 
@@ -55,7 +56,13 @@ export const Banner = () => {
     return (
 
         // TODO: Make it look nicer. 
-        <section className="banner" id="home">
+        <motion.section 
+            className="banner" 
+            id="home"
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+        >
             <Container>   
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
@@ -74,11 +81,16 @@ export const Banner = () => {
                         <Button variant="outlined" size="large" sx={{color: '#121212', border: '2px solid black', '&:hover':{border: '2px solid gray'}}} endIcon={<DownloadIcon />} href={resume} download="Resume">Download My Resume</Button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img className="img" src={imgPB} alt="Header Img" />
+                        <motion.img 
+                            className="img" 
+                            src={imgPB} 
+                            alt="Header Img" 
+                            whileHover={{ scale: 1.05 }}
+                        />
                     </Col>
                 </Row>
             </Container>
-        </section>
+        </motion.section>
     )
 }
 

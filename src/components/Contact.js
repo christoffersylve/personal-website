@@ -6,6 +6,7 @@ import SendIcon from '@mui/icons-material/Send';
 import CheckIcon from '@mui/icons-material/Check';
 import { Button } from '@mui/material';
 import emailjs from '@emailjs/browser';
+import { motion, useAnimate } from "framer-motion"
 
 
 export const Contact = () => {
@@ -36,8 +37,9 @@ export const Contact = () => {
     const form = useRef();
 
     const handleSubmit = (e) => {
+      console.log("Button Clicked!")
       e.preventDefault();
-      sendEmail(e);
+      //sendEmail(e);
       setFormDetails(formInitialDetails);
       setIsClicked(true);
     }
@@ -94,7 +96,15 @@ export const Contact = () => {
                     </Col>
                     <Col size={12} className="px-1">
                       <textarea rows="6" name="message" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
-                      <Button variant="outlined" type="submit" value="Send" size="large" sx={{color: '#121212', border: '2px solid black', '&:hover':{border: '2px solid gray'}}} disabled = {isClicked} endIcon={!isClicked ? <SendIcon/> : <CheckIcon/>}>{!isClicked ? "Send" : "Sent"}</Button>                    </Col>
+                      <motion.button
+                        whileHover={{scale:1.05}}
+                        type="submit"
+                        value="Send"
+                        disabled = {isClicked}
+                        className={!isClicked ? "submit-btn" : "submit-btn-clicked"}
+                      > {!isClicked ? "SEND" : "SENT"} {!isClicked ? <SendIcon/> : <CheckIcon/>}
+                      </motion.button>                      
+                    </Col>
                   </Row>
                 </form>
               </div>}
@@ -106,3 +116,5 @@ export const Contact = () => {
     </div>
   )
 }
+
+// <Button variant="outlined" type="submit" value="Send" size="large" sx={{color: '#121212', border: '2px solid black', '&:hover':{border: '2px solid gray'}}} disabled = {isClicked} endIcon={!isClicked ? <SendIcon/> : <CheckIcon/>}>{!isClicked ? "Send" : "Sent"}</Button>

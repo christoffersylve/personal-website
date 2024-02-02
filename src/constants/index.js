@@ -69,4 +69,42 @@ const experiences = [
       },
   ];
 
-export {experiences};
+const frameworkIconUrls = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original-wordmark.svg",
+]
+
+const languageIconUrls = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", 
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",        
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clojure/clojure-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg",  
+]
+
+const softwareIconUrls = [
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original-wordmark.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg",       
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg",
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg",
+]
+
+export {experiences, frameworkIconUrls, languageIconUrls, softwareIconUrls};

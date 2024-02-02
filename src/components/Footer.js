@@ -5,8 +5,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import '../App.css';
 import { useEffect, useState } from "react";
 
-
-
 export const Footer = () => {
   return (
     <footer className="footer">

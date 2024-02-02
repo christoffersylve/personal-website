@@ -115,8 +115,13 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-size: 18px;
   opacity: 0.75;
 }
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
+    transition: 0.2s;
+    scale: 1.1;
+    opacity: 1;
+}
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    font-weight: 500;
     opacity: 1;
 }
 span.navbar-text {
@@ -282,24 +287,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 96%;
 }
-.banner button {
-  color: black;
-  font-weight: 700;
-  font-size: 20px;
-  margin-top: 60px;
-  letter-spacing: 0.8px;
-  display: flex;
-  align-items: center;
+.banner .download-btn {
+  gap: 5px;
+  border: 2px solid black;
+  padding: 5px 13px 5px 13px;
+  border-radius: 5px;
+  width:fit-content;
 }
+
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
-.banner button:hover svg {
-  margin-left: 25px;
-}
+
 .banner img {
   border-radius: 50%;
   margin: 0vh 0vh 0vh 0vh; 
@@ -312,17 +314,35 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0 100px 80px rgba(0, 0, 0, 0.12)
   ;
 }
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
+
+.banner-row {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7svh;
 }
+
+.banner-text {
+  display: flex;
+  justify-content: space-around;
+}
+
+.banner-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+}
+
+.banner-img-box {
+  width: 41%;
+  height: 41%;
+}
+
+
+
+
+
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
@@ -467,6 +487,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .experience .boxtest {
   width: 100%;
 }
+
+.hello {}
 
 .experience .hello {
   display: flex;
@@ -824,6 +846,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .contact h3 {
   margin-top: 10vh;
+}
+
+.contact .submit-btn {
+  display: flex;
+  gap: 10px;
+  border: 2px solid black;
+  padding: 7px 18px 7px 18px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.contact .submit-btn-clicked {
+  transition:  0.15s ease-in-out;
+  display: flex;
+  gap: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.172);
+  padding: 7px 18px 7px 18px;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 /************ Counter Css ************/
