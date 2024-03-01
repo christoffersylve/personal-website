@@ -6,7 +6,7 @@ import filt from "../assets/img/filt.png";
 const experiences = [
     {
       title: "Teaching Assistant",
-      company_name: "Lunds Tekniska Högskola",
+      company_name: "Lunds Tekniska Högskola - Lund",
       icon: lth,
       iconBg: "#fff",
       date: "Jan 2024 - Current",
@@ -19,7 +19,7 @@ const experiences = [
     },
     {
       title: "Software Engineer",
-      company_name: "Pickit",
+      company_name: "Pickit - Visby",
       icon: pickit,
       iconBg: "#f7f7f780",
       date: "Jun 2023 - Aug 2023",
@@ -36,7 +36,7 @@ const experiences = [
     },
     {
       title: "Email and Data Migration",
-      company_name: "Filt",
+      company_name: "Filt - Stockholm",
       icon: filt,
       iconBg: "#1c1c1c",
       date: "Apr 2023 - May 2023",
@@ -51,7 +51,7 @@ const experiences = [
     },
     {
         title: "Software Engineer",
-        company_name: "Pickit",
+        company_name: "Pickit - Visby",
         icon: pickit,
         iconBg: "#f7f7f780",
         date: "Jun 2022 - Aug 2022",

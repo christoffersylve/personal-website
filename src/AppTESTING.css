@@ -36,7 +36,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color:#faebd7 !important;
+  background-color:#FAFAFA !important;
   color: #121212 !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -95,10 +95,16 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
-nav.navbar.scrolled {
+/* nav.navbar.scrolled {
   padding: 0px 0;
   background-color:bisque;
   box-shadow: 0 4px 10px -5px gray;
+} */
+nav.navbar.scrolled {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 nav.navbar a.navbar-brand {
     width: 9%;
@@ -108,12 +114,12 @@ nav.navbar a.navbar-brand {
   padding-bottom: 0;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
+  font-weight: 600;
   color: #121212 !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
-  opacity: 0.70;
+  opacity: 0.75;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
     transition: 0.2s;
@@ -121,9 +127,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover {
     opacity: 1;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
-    font-weight: 500;
-    color: black;
-    scale:1.1;
+    font-weight: 700;
     opacity: 1;
 }
 span.navbar-text {
@@ -192,7 +196,8 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color:burlywood;
+  background-color:black;
+  color:whitesmoke;
   left: 0;
   top: 0;
   z-index: -1;
@@ -200,7 +205,7 @@ span.navbar-text {
 }
 
 .navbar-text .link-button:hover {
-  color: #121212;
+  color: white;
 }
 .navbar-text .link-button:hover::before {
 	content: "";
@@ -209,11 +214,14 @@ span.navbar-text {
 	position: absolute;
 }
 
+
+
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
 	outline: none;
     box-shadow: none;
 }
+
 nav.navbar .navbar-toggler-icon {
   width: 24px;
   height: 17px;
@@ -257,7 +265,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  height: 100vh;
+  height: 100vh; 
   margin-top: 0;
   padding: 30vh 0 15vh 0;
   background-position: top center;
@@ -294,12 +302,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 5px;
   width:fit-content;
 }
+
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
+
 .banner img {
   border-radius: 50%;
   margin: 0vh 0vh 0vh 0vh; 
@@ -312,12 +322,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0 100px 80px rgba(0, 0, 0, 0.12)
   ;
 }
+
 .banner-row {
   margin-top: 0;
   display: flex;
   justify-content: center;
   gap: 7svh;
 }
+
 .banner-text {
   display: flex;
   justify-content: space-around;
@@ -329,17 +341,126 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   align-items: left;
   flex-direction: column;
 }
+
 .banner-img-box {
   width: 41%;
   height: 41%;
 }
+
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+
+/************ Skills Css ************/
+
+.skills-section {
+  padding-top: 3vh;
+  height: auto;
+}
+.skills {
+  padding: 20vh 0;
+  padding: 80px 0;
+  position: relative;
+  color: black;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+}
+.skills h1 {
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+}
+.skills h4 {
+	font-size: 20px;
+	font-weight: 600;
+  text-align: center;
+}
+.skills p {
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  text-align: center;
+}
+.skills .nav.nav-pills {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+}
+.skills .nav.nav-pills .nav-item {
+  width: 33.33333%;
+}
+.skills .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 20px 0px 20px 0px;
+  color: gray;
+  width: 100%;
+  font-size: 25px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.1s ease-in-out;
+  text-align: center;
+}
+.skills .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+.skills .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+.skills .nav.nav-pills .nav-link.active {
+    background:black;
+    color: white;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+.skills .grid {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  height: 280px;
+}
+
+.skills .row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 4em;
+}
+
+.nav-link#skillss-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+.nav-link#skillss-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.nav-link#skillss-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+
+
 /************ Education Css ************/
 
 .education {
-  color: #121212;
+  color: whitesmoke;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -348,6 +469,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .education h1,h2 {
+  color: black;
   display: flex;
   font-weight: 700;
   justify-content: center;
@@ -361,13 +483,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: #666;
   border-width: 3px;
   padding: 5vh 0vh 5vh 0vh;
-  background:#faebd7;
 }
 
 .educationCard {
   position: relative;
   padding: 25px 20px 30px 25px;
-  background-color: bisque;
+  background-color: #121212;
   border-radius: 24px;
   text-align: center;
   margin-bottom: 4vh;
@@ -456,6 +577,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .experience h1,h2 {
+  padding: 2rem;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -463,22 +585,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .experience p {
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  background-color: white;
+  color: #121212;
+  padding: 1rem;
   display: flex;
   justify-content: left;
 }
 
 .experience-box {
-  padding: 20svh 0vh 30vh 0vh;
+  padding: 20svh 0vh 30vh 0vh !important;
   background:#ffe4c4;
 }
 
-.experience .boxtest {
-  width: 100%;
-}
-
-.hello {}
 
 .experience .hello {
   display: flex;
@@ -514,8 +633,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 
+.experience .title-container {
+  margin-left: 50px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
 .experience .language-container {
-  margin-top: 15px;
+  margin-left: 50px;
+  margin: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -629,116 +757,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .personal-lower-box .music {
   width: 30%;
-}
-
-
-/************ Skills Css ************/
-.skills-section {
-  height: auto;
-}
-.skills {
-  padding: 20vh 0;
-  padding: 80px 0;
-  position: relative;
-  background-image: linear-gradient(#faebd7 , bisque);
-  box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
-  ;
-}
-.skills h1 {
-  font-weight: 700;
-  display: flex;
-  justify-content: center;
-}
-
-.skills h2 {
-  font-weight: 700;
-  font-size: large;
-  display: flex;
-  justify-content: center;
-}
-.skills p {
-  color: #121212;
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 20px auto;
-  text-align: center;
-  width: 56%;
-}
-.skills .nav.nav-pills {
-  width: 90%;
-  margin: 0 auto;
-  border-radius: 50px;
-  overflow: hidden;
-}
-.skills .nav.nav-pills .nav-item {
-  width: 33.33333%;
-}
-.skills .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 20px 0px 20px 0px;
-  color: black;
-  width: 100%;
-  font-size: 25px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s ease-in-out;
-  text-align: center;
-  z-index: 0;
-}
-.skills .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.15s ease-in-out;
-}
-.skills .nav.nav-pills .nav-link.active::before {
-    width: 100% !important;
-}
-.skills .nav.nav-pills .nav-link.active {
-    font-weight: 500;
-    background: burlywood;
-    border-radius: 50px;
-    border: 1px solid black;
-}
-.skills .grid {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  height: 280px;
-}
-
-.skills .row {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 4em;
-}
-
-.nav-link#skillss-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
-}
-.nav-link#skillss-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-.nav-link#skillss-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
 }
 
 /************ Contact Css ************/

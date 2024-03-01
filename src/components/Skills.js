@@ -13,9 +13,9 @@ export const Skills = () => {
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={""}>
-                <h2>TECHNICAL SKILLS</h2>
-                <p>A collection of technical skills I have had the privilage to have worked with</p>
+              <div>
+                <h1>TECHNICAL SKILLS</h1>
+                <h2>A collection of technical skills I have had the privilage to have worked with</h2>
                 <p>proficient in all and above</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="second">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
@@ -38,7 +38,7 @@ export const Skills = () => {
                                     key={`experience-${index}`} 
                                     src={url} 
                                     style={{height:100, width:100}}
-                                    whileHover={{ scale: 1.2 }}
+                                    whileHover={{ scale: 1.2 }}                            
                                   />
                                 ))}   
                             </Row>

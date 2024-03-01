@@ -9,7 +9,6 @@ import { motion } from "framer-motion"
 
 export const Banner = () => {
 
-    const [getAccessToken,setAccessToken] = useState('');
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState(''); 
@@ -67,7 +66,7 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">
-                            Hi there!
+                            Hi there 👋
                         </span>
                         <h1>
                             {'Christoffer Sylve here'}

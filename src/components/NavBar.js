@@ -29,9 +29,6 @@ export const NavBar = () => {
         >
             <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
                 <Container>
-                <Navbar.Brand href="#home"> 
-                    <h3>C.SYLVE</h3>
-                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
@@ -41,7 +38,7 @@ export const NavBar = () => {
                         <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('skills')}>Skills</Nav.Link>
                         <Nav.Link href="#education" className={activeLink === 'education' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('education')}>Education</Nav.Link>
                         <Nav.Link href="#experience" className={activeLink === 'experience' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('experience')}>Experience</Nav.Link>
-                        <Nav.Link href="#personal" className={activeLink === 'personal' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('personal')}>Personal Life</Nav.Link>
+                        <Nav.Link href="#personal" className={activeLink === 'personal' ? 'active navbar-link' : 'navbar-link'} onClick={ () => onUpdateActiveLink('personal')}>About Me</Nav.Link>
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">

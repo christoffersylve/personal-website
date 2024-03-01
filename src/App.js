@@ -17,14 +17,16 @@ function App() {
       <NavBar/>
       <Banner/>
       <Skills/>
-      <Education/>
       <Experience/>
       <Personal/>
       <Contact/>
-      <VisitorCounter/>
       <Footer/>
     </div>
   );
 }
+
+// Removed 
+// <Education/> // Removed this... Not really relevant. 
+// <VisitorCounter/> // Bad implementation and not relevant. 
 
 export default App;
