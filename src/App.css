@@ -544,7 +544,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ personal Css ************/
 
 .personal {
-  padding: 10vh 0px 20vh 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
   position: relative;
 }
 .personal-bx {

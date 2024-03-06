@@ -17,7 +17,7 @@ export const Banner = () => {
 
     let count = 0;
 
-    const toRotate = [ "programming","studying", " working on a side project", "coding up this website", "listening to music", "hanging out with friends :)", "struggling with css :("];
+    const toRotate = [ "programming", "listening to music", "studying", " working on a side project", "coding up this website", "hanging out with friends :)", "struggling with css :("];
 
     useEffect(() => {
         let ticker = setInterval(() => {
