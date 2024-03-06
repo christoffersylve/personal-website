@@ -39,7 +39,7 @@ export const Contact = () => {
     const handleSubmit = (e) => {
       console.log("Button Clicked!")
       e.preventDefault();
-      //sendEmail(e);
+      sendEmail(e);
       setFormDetails(formInitialDetails);
       setIsClicked(true);
     }
